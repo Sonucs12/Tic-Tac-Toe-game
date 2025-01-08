@@ -35,7 +35,8 @@ This is a simple and interactive Tic-Tac-Toe game built using HTML, CSS, and Jav
 2. Open the index.html file in your preferred web browser.
    
 Screenshots
-![Uploading Screenshot 2025-01-08 211143.png…]()
+![Screenshot 2025-01-08 211143](https://github.com/user-attachments/assets/fea6b36f-c919-48e3-b27f-2a7f9055b189)
+
 
 ## Acknowledgments
 This project is designed and developed by Sonu Kumar. If you have any feedback or suggestions, feel free to reach out via the links above.

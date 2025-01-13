@@ -229,3 +229,33 @@ function restart() {
   resetGame();
   chance.textContent = "Start game or select player";
 }
+
+
+
+const coin = document.querySelector('.coin');
+const tossButton = document.getElementById('toss-button');
+const front = document.querySelector('.front');
+const back = document.querySelector('.back');
+
+tossButton.addEventListener('click', () => {
+    coin.classList.add('flip');
+    setTimeout(() => {
+        coin.classList.remove('flip');
+        const result = Math.random();
+        let outcome;
+
+        if (result < 0.5) {
+            outcome = 'Heads';
+            front.style.transform = 'rotateY(0deg)';
+            back.style.transform = 'rotateY(180deg)';
+             
+        } else {
+            outcome = 'Tails';
+            front.style.transform = 'rotateY(180deg)';
+            back.style.transform = 'rotateY(0deg)';
+           
+        }
+
+       
+    }, 3000);
+});

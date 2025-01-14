@@ -35,12 +35,17 @@
         <div class="player-o" id="o">
           Player- O<span id="scoreo">Score: 0</span>
         </div>
-      </div><span id="chance">Start game or select player</span>
-      <div class="coin">
-        <div class="front"><img src="head.png" alt="Heads"></div>
-        <div class="back"><img src="tail.png" alt="Tails"></div>
-    </div>
-    <button id="toss-button">Toss Coin</button>
+      </div>
+      <span id="chance"
+        >Start game or select player or <span id="tossACoin">Toss a coin</span>
+      </span>
+      <div class="toss-section mt-4">
+        <div class="coin">
+          <div class="front"><img src="head.png" alt="Heads" /></div>
+          <div class="back"><img src="tail.png" alt="Tails" /></div>
+        </div>
+        <button id="toss-button" class="btn btn-primary btn-sm">Toss Coin</button>
+      </div><div class="result mt-5"></div>
       <div class="container">
         <div id="box1" class="box"></div>
         <div id="box2" class="box"></div>
@@ -53,25 +58,37 @@
         <div id="box9" class="box"></div>
       </div>
 
-      <button id="restart" type="button" class="btn btn-primary mt-3">Restart Game</button>
+      <button id="restart" type="button" class="btn btn-primary mt-3">
+        Restart Game
+      </button>
     </section>
     <footer class="footer">
-      
-        <p>© 2024 Design & Developed By Sonu Kumar | All Rights Reserved</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/sonu-kumar-15b6b3239/" target="_blank" class="icon linkedin">
-            <i class="fab fa-linkedin"></i>
-          </a>
-  
-          <a href="https://github.com/Sonucs12" target="_blank" class="icon github">
-            <i class="fab fa-github"></i>
-          </a>
-  
-          <a href="https://sonucs-portfolio.netlify.app/" target="_blank" class="icon portfolio">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-   
+      <p>© 2024 Design & Developed By Sonu Kumar | All Rights Reserved</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/sonu-kumar-15b6b3239/"
+          target="_blank"
+          class="icon linkedin"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a
+          href="https://github.com/Sonucs12"
+          target="_blank"
+          class="icon github"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a
+          href="https://sonucs-portfolio.netlify.app/"
+          target="_blank"
+          class="icon portfolio"
+        >
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
     </footer>
     <script src="script.js"></script>
   </body>

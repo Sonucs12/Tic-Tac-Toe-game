@@ -77,15 +77,74 @@ section {
 #chance {
   margin-top: 20px;
 }
+#tossACoin{
+  text-decoration: underline;
+}
+.result {
+  display: none;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  font-weight: 900;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  
+  border-radius: 50%;
+  border: 1px solid goldenrod;
+}
+
+.result.show {
+  display: flex;
+  transform: scale(1);
+  animation: scaleUp 0.3s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.toss-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
 .coin {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+
   border-radius: 50%;
   perspective: 600px;
   margin: 20px auto;
   transition: transform 1s ease-in-out;
 }
+
+.toss-section.displayCoin {
+  display: flex;
+  animation: scaleUp 0.3s ease forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 
 .front,
 .back {
@@ -98,12 +157,15 @@ section {
   backface-visibility: hidden;
   transition: transform 1s ease-in-out;
 }
+
 .front {
   transform: rotateY(0deg);
 }
+
 .front {
   transform: rotateY(180deg);
 }
+
 .front img,
 .back img {
   width: 100%;
@@ -115,11 +177,13 @@ section {
 .flip {
   animation: rotate 3s ease-in-out infinite;
 }
+
 @keyframes rotate {
   100% {
     transform: rotateY(1800deg);
   }
 }
+
 .container {
   margin-top: 2rem;
   width: fit-content;
@@ -132,6 +196,33 @@ section {
   border: 1px solid #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  transition: scale 0.3s ease;
+  animation: scaleup 0.3s ease forwards;
+}
+
+@keyframes scaleup {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.result,
+.hideContainer {
+  animation: scaleDown 0.3s ease forwards;
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
 }
 
 .box {
@@ -167,6 +258,7 @@ section {
   transform: scale(1.02);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
+
 .footer {
   background-color: #222;
   color: #fff;
@@ -209,6 +301,7 @@ section {
   color: #1e90ff;
   transform: scale(1.2);
 }
+
 @media (max-width: 450px) {
   .score-board {
     flex-direction: column;
